@@ -16,12 +16,12 @@ public class PagoService {
     private PagoRepository pagoRepository;
 
     public Pago crearPago(Pago pago) {
-        // Validar método de pago simple
+        
         if (pago.getMetodoPago() == null || pago.getMetodoPago().isBlank()) {
             throw new IllegalArgumentException("Método de pago no puede ser vacío");
         }
 
-        // Estado inicial pendiente
+        
         if (pago.getEstado() == null || pago.getEstado().isBlank()) {
             pago.setEstado("PENDIENTE");
         }
