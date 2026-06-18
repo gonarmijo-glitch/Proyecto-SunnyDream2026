@@ -37,8 +37,9 @@ public class ProductoServiceTest {
     @Test
     void listarProductos() {
 
-        Producto producto1 = new Producto(1L, "scrunchie", "accesorio", 1000, 20);
-        Producto producto2 = new Producto(2L, "pop socket", "accesorio", 4000, 11);
+        Producto producto1 = new Producto(1L, "scrunchie", "accesorio", 1000, 14);
+        Producto producto2 = new Producto(2L, "pop socket", "accesorio", 3000, 5);
+        Producto producto3 = new Producto(3L, "pop socket anillo", "accesorio", 4000, 6);
 
         when(productoRepository.findAll())
                 .thenReturn(Arrays.asList(producto1, producto2));
@@ -51,7 +52,7 @@ public class ProductoServiceTest {
     @Test
     void buscarProductoPorId() {
 
-        Producto producto = new Producto(1L, "scrunchie", "accesorio", 1000, 20);
+        Producto producto = new Producto(1L, "scrunchie", "accesorio", 1000, 14);
 
         when(productoRepository.findById(1L))
                 .thenReturn(Optional.of(producto));
@@ -79,7 +80,7 @@ public class ProductoServiceTest {
     @Test
     void guardarProducto() {
 
-        Producto producto = new Producto(null, "scrunchie", "accesorio", 1000, 20);
+        Producto producto = new Producto(null, "scrunchie", "accesorio", 1000, 14);
 
         when(productoRepository.save(producto))
                 .thenReturn(producto);
@@ -93,7 +94,7 @@ public class ProductoServiceTest {
     void actualizarProducto() {
 
         Producto productoExistente =
-                new Producto(1L, "scrunchie", "accesorio", 1000, 20);
+                new Producto(1L, "scrunchie", "accesorio", 1000, 14);
 
         Producto productoActualizado =
                 new Producto(1L, "scrunchie premium", "accesorio", 1500, 30);
@@ -116,7 +117,7 @@ public class ProductoServiceTest {
     void eliminarProducto() {
 
         Producto producto =
-                new Producto(1L, "scrunchie", "accesorio", 1000, 20);
+                new Producto(1L, "scrunchie", "accesorio", 1000, 14);
 
         when(productoRepository.findById(1L))
                 .thenReturn(Optional.of(producto));
