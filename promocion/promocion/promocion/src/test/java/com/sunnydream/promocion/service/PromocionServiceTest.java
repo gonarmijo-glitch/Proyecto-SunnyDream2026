@@ -72,7 +72,7 @@ public class PromocionServiceTest {
         Promocion resultado =
                 promocionService.buscarPromocionPorId(1L);
 
-        assertEquals("VERANO10", resultado.getCodigo());
+        assertEquals("SUNNYDREAM10", resultado.getCodigo());
     }
 
     @Test
