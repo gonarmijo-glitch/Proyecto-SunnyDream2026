@@ -36,7 +36,7 @@ public class PromocionServiceTest {
         Promocion promo1 = new Promocion(
                 1L,
                 "BIENVENIDA15",
-                10,
+                15,
                 LocalDateTime.now(),
                 LocalDateTime.now().plusDays(30));
 
@@ -62,7 +62,7 @@ public class PromocionServiceTest {
         Promocion promocion = new Promocion(
                 1L,
                 "BIENVENIDA15",
-                10,
+                15,
                 LocalDateTime.now(),
                 LocalDateTime.now().plusDays(30));
 
@@ -81,7 +81,7 @@ public class PromocionServiceTest {
         Promocion promocion = new Promocion(
                 null,
                 "BIENVENIDA15",
-                10,
+                15,
                 LocalDateTime.now(),
                 LocalDateTime.now().plusDays(30));
 
