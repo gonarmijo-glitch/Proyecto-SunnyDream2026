@@ -35,7 +35,7 @@ public class PromocionServiceTest {
 
         Promocion promo1 = new Promocion(
                 1L,
-                "SUNNYDREAM10",
+                "BIENVENIDA15",
                 10,
                 LocalDateTime.now(),
                 LocalDateTime.now().plusDays(30));
@@ -61,7 +61,7 @@ public class PromocionServiceTest {
 
         Promocion promocion = new Promocion(
                 1L,
-                "SUNNYDREAM10",
+                "BIENVENIDA15",
                 10,
                 LocalDateTime.now(),
                 LocalDateTime.now().plusDays(30));
@@ -72,7 +72,7 @@ public class PromocionServiceTest {
         Promocion resultado =
                 promocionService.buscarPromocionPorId(1L);
 
-        assertEquals("SUNNYDREAM10", resultado.getCodigo());
+        assertEquals("BIENVENIDA15", resultado.getCodigo());
     }
 
     @Test
@@ -80,7 +80,7 @@ public class PromocionServiceTest {
 
         Promocion promocion = new Promocion(
                 null,
-                "SUNNYDREAM10",
+                "BIENVENIDA15",
                 10,
                 LocalDateTime.now(),
                 LocalDateTime.now().plusDays(30));
