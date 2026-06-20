@@ -1,0 +1,5 @@
+com\sunnydream\service_envio\model\Envio.class
+com\sunnydream\service_envio\controller\EnvioController.class
+com\sunnydream\service_envio\repository\EnvioRepository.class
+com\sunnydream\service_envio\service\EnvioService.class
+com\sunnydream\service_envio\ServiceEnvioApplication.class
