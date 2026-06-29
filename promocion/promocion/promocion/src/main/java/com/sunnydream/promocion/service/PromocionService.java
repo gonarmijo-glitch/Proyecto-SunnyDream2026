@@ -42,7 +42,11 @@ public class PromocionService {
 }
 
     public void eliminarPromocion(Long id) {
-        
+
+    Promocion promocion = promocionRepository.findById(id)
+            .orElseThrow(() ->
+                    new RuntimeException("Promoción no encontrada con ID: " + id));
+     promocionRepository.delete(promocion);
     }
 
 }
