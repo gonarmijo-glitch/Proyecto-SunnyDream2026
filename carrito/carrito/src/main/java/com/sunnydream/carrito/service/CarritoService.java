@@ -23,6 +23,10 @@ public class CarritoService {
     }
 
     public Carrito guardarCarrito(Carrito carrito) {
+
+       carrito.setIdCarrito(null);
+       carrito.setFechaCreacion(LocalDateTime.now());
+
         return carritoRepository.save(carrito);
     }
 
