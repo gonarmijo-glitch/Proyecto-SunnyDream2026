@@ -41,6 +41,9 @@ public class ClienteController {
         return ResponseEntity.ok(clienteService.guardar(cliente));
     }
 
+    @Operation(summary = "Eliminar cliente")
+    @ApiResponse(responseCode = "204", description = "Cliente eliminado")
+    @ApiResponse(responseCode = "404", description = "Cliente no encontrado")
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> eliminar(@PathVariable Long id) {
         clienteService.eliminar(id);
