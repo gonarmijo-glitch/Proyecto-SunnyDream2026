@@ -24,6 +24,7 @@ public class ClienteService {
     }
 
     public Cliente guardar(Cliente cliente) {
+        cliente.setId(null);
         return clienteRepository.save(cliente);
     }
 
