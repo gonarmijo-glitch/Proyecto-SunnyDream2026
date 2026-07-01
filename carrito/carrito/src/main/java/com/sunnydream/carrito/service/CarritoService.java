@@ -35,7 +35,7 @@ public class CarritoService {
         Carrito carrito = carritoRepository.findById(id)
                 .orElseThrow(() -> new RuntimeException("Carrito no encontrado con ID: " + id));
 
-        carrito.setIdCarrito(carritoActualizado.getIdCarrito());
+        
         carrito.setIdCliente(carritoActualizado.getIdCliente());
         carrito.setFechaCreacion(carritoActualizado.getFechaCreacion());
         carrito.setEstado(carritoActualizado.getEstado());
