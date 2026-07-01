@@ -24,6 +24,7 @@ public class PromocionService {
     }
 
     public Promocion guardarPromocion(Promocion promocion) {
+        promocion.setIdPromocion(null);
         return promocionRepository.save(promocion);
     }
 
