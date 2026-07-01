@@ -32,7 +32,12 @@ public class EnvioController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
-    @PutMapping("/{id}")
+  
+    @PostMapping
+    public ResponseEntity<Envio> crear(@RequestBody Envio envio) {
+        return ResponseEntity.ok(envioService.guardar(envio));
+    }
+      @PutMapping("/{id}")
     public ResponseEntity<Envio> actualizar(
             @PathVariable Long id,
             @RequestBody Envio envio) {
@@ -48,9 +53,5 @@ public class EnvioController {
         envioService.eliminar(id);
 
         return ResponseEntity.noContent().build();
-    }
-    @PostMapping
-    public ResponseEntity<Envio> crear(@RequestBody Envio envio) {
-        return ResponseEntity.ok(envioService.guardar(envio));
     }
 }
