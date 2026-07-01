@@ -25,6 +25,11 @@ public class VentaService {
     }
 
     public Venta guardarVenta(Venta venta) {
+        venta.setIdVenta(null);
+
+        if (venta.getFechaVenta() == null) {
+            venta.setFechaVenta(LocalDateTime.now());
+        }
         return ventaRepository.save(venta);
     }
 
