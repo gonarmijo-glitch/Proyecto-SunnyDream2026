@@ -24,6 +24,7 @@ public class NotificacionService {
     }
 
     public Notificacion guardar(Notificacion notificacion) {
+        notificacion.setId(null);
         if (notificacion.getMensaje() == null || notificacion.getMensaje().trim().isEmpty()) {
             throw new IllegalArgumentException("El cuerpo de la notificacion no puede estar vacio");
         }
