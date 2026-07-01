@@ -16,7 +16,7 @@ public class PagoService {
     private PagoRepository pagoRepository;
 
     public Pago crearPago(Pago pago) {
-        
+        pago.setIdPago(null);
         if (pago.getMetodoPago() == null || pago.getMetodoPago().isBlank()) {
             throw new IllegalArgumentException("Método de pago no puede ser vacío");
         }
