@@ -23,6 +23,7 @@ public class UsuarioService {
     }
 
     public Usuario guardar(Usuario usuario) {
+        usuario.setId(null);
         return usuarioRepository.save(usuario);
     }
 
