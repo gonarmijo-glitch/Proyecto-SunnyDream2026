@@ -25,6 +25,7 @@ public class EnvioService {
     }
 
     public Envio guardar(Envio envio) {
+        envio.setId(id:null);
         if (envio.getDireccion() == null || envio.getDireccion().trim().isEmpty()) {
             throw new IllegalArgumentException("La direccion de envio no puede estar vacia");
         }
