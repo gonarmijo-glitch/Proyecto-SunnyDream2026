@@ -32,7 +32,23 @@ public class EnvioController {
                 .map(ResponseEntity::ok)
                 .orElse(ResponseEntity.notFound().build());
     }
+    @PutMapping("/{id}")
+    public ResponseEntity<Envio> actualizar(
+            @PathVariable Long id,
+            @RequestBody Envio envio) {
 
+        return ResponseEntity.ok(envioService.actualizar(id, envio));
+    }
+
+    @ApiResponse(responseCode = "204", description = "Envio eliminado")
+    @ApiResponse(responseCode = "404", description = "Envio no encontrado")
+    @DeleteMapping("/{id}")
+    public ResponseEntity<Void> eliminar(@PathVariable Long id) {
+
+        envioService.eliminar(id);
+
+        return ResponseEntity.noContent().build();
+    }
     @PostMapping
     public ResponseEntity<Envio> crear(@RequestBody Envio envio) {
         return ResponseEntity.ok(envioService.guardar(envio));
