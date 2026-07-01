@@ -23,6 +23,7 @@ public class ProductoService {
     }
 
     public Producto guardarProducto(Producto producto) {
+        producto.setId(null);
         return productoRepository.save(producto);
     }
 
