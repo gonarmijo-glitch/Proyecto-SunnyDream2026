@@ -33,6 +33,7 @@ public class InventarioService {
     }
 
     public Inventario guardarInventario(Inventario inventario) {
+        inventario.setId(null);
         return repository.save(inventario);
     }
 
